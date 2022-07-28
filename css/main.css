@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: #0E0E0E;
+}
+.parent {
+    width: calc(90% - 80px);
+    height: calc(100vh - 120px);
+    margin: auto;
+    background-color: white;
+    padding: 60px 40px ;
+    display: flex;
+}
+
+.box {
+    width: 25%;
+    height: 100%;
+    background-color: gold;
+    display: flex;
+    flex-direction: column;
+}
+.box:not(:last-child) {
+    border-right: 1px solid #373737;
+}
+.box:nth-child(3){
+    color: white;
+    height: calc(100% + 50px);
+    margin-top: -25px;
+}
+.box .up {
+    height: 35%;
+    width: 100%;
+    background-color: #242424;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-bottom: 1px solid #373737;
+}
+.box:nth-child(3) .up {
+    background-color: #03A9F4;
+    border-bottom: 1px solid #ccc;
+}
+.box .up p {
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.box:nth-child(3) .up p {
+    background-color: #03A9F4;
+}
+.box .up span {
+    display: block;
+    margin-top: 30px;
+    font-size: 30px;
+    position: relative;
+}
+.box .up span::before {
+    content: "$";
+    position: absolute;
+    left: -15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.box .up span::after {
+    content: "/mo";
+    position: absolute;
+    font-size: 16px;
+    bottom: 6px;
+}
+.box .middle {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.box:nth-child(3) .middle p {
+    background-color: #03A9F4;
+    color: white;
+}
+.box .middle p {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    background-color: #242424;
+    font-size: 14px;
+}
+.box .middle p:not(:last-child) {
+    border-bottom: 1px solid #373737;
+}
+.box .middle p:nth-of-type(2),
+.box .middle p:nth-of-type(4) {
+    background-color: #2A2A2A;
+}
+.box:nth-child(3) .middle p {
+    background-color: #03A9F4;
+    color: white;
+}
+.box:nth-child(3) .middle p:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+.box .down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    background-color: #242424;
+    border-top: 1px solid #373737;
+}
+.box .down a {
+    display: block;
+    text-decoration: none;
+    color: #eee;
+    background-color: none;
+    padding: 10px 35px ;
+    border: 1px solid #777;
+    font-weight: normal;
+
+}
+.box:nth-child(3) .down {
+    background-color: #03A9F4;
+    border-top: 1px solid #ccc;
+}
+.box:nth-child(3) .down a {
+    border: 1px solid #ccc;
+}
